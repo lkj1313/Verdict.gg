@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/logo.png";
-import { Button } from "@/components/common/Button";
+import { Button, Input } from "@/components/common";
 import { Pencil, Bell, User } from "lucide-react";
 
 const Header = () => {
@@ -19,6 +19,10 @@ const Header = () => {
             priority
           />
         </Link>
+        {/* 가운데 인풋 */}
+        <div className="flex-1 px-8">
+          <Input type="text" placeholder="검색해보세요..." />
+        </div>
         <div className="flex items-center gap-3">
           {/* 글쓰기 버튼 */}
           <Button variant="default">

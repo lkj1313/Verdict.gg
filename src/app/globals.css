@@ -1,18 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 /* 2. margin, padding 제거 */
 body,
 h1,
@@ -62,8 +47,8 @@ svg {
   height: auto;
 }
 
-/* 7. 버튼, 인풋 등 기본 리셋 */
-button,
+7. 버튼,
+인풋 등 기본 리셋 button,
 input,
 select,
 textarea {
@@ -75,3 +60,17 @@ textarea {
   margin: 0;
   outline: none;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
