@@ -9,9 +9,7 @@ export default function NotFound() {
       <h2 className="text-2xl font-semibold text-gray-700 mb-2">
         페이지를 찾을 수 없습니다
       </h2>
-      <p className="text-gray-500 mb-6">
-        존재하지 않는 주소이거나, 이동된 페이지입니다.
-      </p>
+      <p className="text-gray-500 mb-6">존재하지 않는 주소입니다!</p>
       <Link
         href="/"
         className="inline-block bg-black text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition"
