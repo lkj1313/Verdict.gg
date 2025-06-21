@@ -29,7 +29,8 @@ const Header = () => {
           {/* 알림 버튼 (아이콘형) */}
           <Button variant="ghost" size="icon" className="relative">
             <Bell className="w-5 h-5 text-gray-600" />
-            <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full" />
+            {/* <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full" />{" "}
+            알림있을떄쓰기기 */}
           </Button>
 
           {/* 프로필 버튼 (아이콘형) */}
