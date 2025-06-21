@@ -4,7 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/logo.png";
 import { Button, Input } from "@/components/common";
-import { Pencil, Bell, User } from "lucide-react";
+import { Pencil, Bell } from "lucide-react";
+import ProfileMenu from "@/feature/user/ui/ProfileMenu";
+import NotificationMenu from "@/feature/user/ui/NotificationMenu";
 
 const Header = () => {
   return (
@@ -31,16 +33,10 @@ const Header = () => {
           </Button>
 
           {/* 알림 버튼 (아이콘형) */}
-          <Button variant="ghost" size="icon" className="relative">
-            <Bell className="w-5 h-5 text-gray-600" />
-            {/* <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full" />{" "}
-            알림있을떄쓰기기 */}
-          </Button>
+          <NotificationMenu />
 
           {/* 프로필 버튼 (아이콘형) */}
-          <Button variant="ghost" size="icon">
-            <User className="w-5 h-5 text-gray-600" />
-          </Button>
+          <ProfileMenu />
         </div>
       </div>
     </header>
