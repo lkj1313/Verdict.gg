@@ -1,5 +1,6 @@
 'use client';
 
+import { Button } from '@/components/common';
 import {
   Dialog,
   DialogContent,
@@ -35,9 +36,12 @@ export default function ProfileModal({
               height={96}
               className="rounded-full bg-green-700 object-cover"
             />
-            <button className="absolute bottom-1 right-1 p-1 bg-white border rounded-full shadow">
-              <Pencil className="w-4 h-4 text-gray-600" />
-            </button>
+            <Button
+              variant="ghost"
+              className="absolute bottom-1 right-1 p-1 w-6 h-6 bg-white border rounded-full shadow"
+            >
+              <Pencil className="w-4 h-4 rounded-full text-gray-600" />
+            </Button>
           </div>
 
           {/* 랭크 & 포인트 */}
@@ -51,7 +55,7 @@ export default function ProfileModal({
           {/* 판결 승률 */}
           <div className="w-full text-center">
             <p className="text-sm font-medium text-gray-800 mb-2">판결 승률</p>
-            {/* 반원형 그래프 대체 (0%) */}
+
             <p className="mt-2 text-xs text-gray-500">0전 0승 0패</p>
           </div>
 
@@ -60,9 +64,9 @@ export default function ProfileModal({
 
         <DialogFooter>
           <DialogClose asChild>
-            <button className="w-full mt-4 bg-gray-800 text-white py-2 rounded-md">
+            <Button className="w-full mt-4 bg-gray-800 text-white py-2 rounded-md">
               닫기
-            </button>
+            </Button>
           </DialogClose>
         </DialogFooter>
       </DialogContent>
