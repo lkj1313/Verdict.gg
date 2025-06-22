@@ -1,25 +1,20 @@
 // src/shared/ui/header/index.tsx
 
-import Image from "next/image";
-import Link from "next/link";
-import logo from "@/assets/logo.png";
-import { Button, Input } from "@/components/common";
-import { Pencil } from "lucide-react";
-import ProfileMenu from "@/feature/user/ui/ProfileMenu";
-import NotificationMenu from "@/feature/user/ui/NotificationMenu";
+import Link from 'next/link';
+
+import { Button, Input } from '@/components/common';
+import { Pencil } from 'lucide-react';
+import ProfileMenu from '@/feature/user/ui/ProfileMenu';
+import NotificationMenu from '@/feature/user/ui/NotificationMenu';
 
 const Header = () => {
   return (
-    <header className="w-full border-b rounded-lg bg-white py-4">
+    <header className="w-full border-2 shadow-sm rounded-lg py-4">
       <div className="w-full flex justify-between  items-center p-5">
         <Link href="/" className="inline-block">
-          <Image
-            src={logo}
-            alt="Verdict.gg Logo"
-            width={120}
-            height={32}
-            priority
-          />
+          <h1 className="text-4xl font-bold tracking-tight text-primary">
+            Verdict.gg
+          </h1>
         </Link>
         {/* 가운데 인풋 */}
         <div className="flex-1 px-8">
