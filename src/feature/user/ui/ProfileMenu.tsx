@@ -1,14 +1,31 @@
-"use client";
-import { useState } from "react";
-import { User, LogOut, BookText, Gavel, UserCircle } from "lucide-react";
-import Image from "next/image";
-import { Button } from "@/components/common";
+'use client';
+import { useEffect, useRef, useState } from 'react';
+import { User, LogOut, BookText, Gavel, UserCircle } from 'lucide-react';
+import Image from 'next/image';
+import { Button } from '@/components/common';
 
 const ProfileMenu = () => {
   const [open, setOpen] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement>(null); // 버튼+메뉴 전체 감지
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        wrapperRef.current &&
+        !wrapperRef.current.contains(event.target as Node)
+      ) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
-    <div className="relative">
+    <div className="relative" ref={wrapperRef}>
       <Button
         variant="ghost"
         onClick={() => setOpen((prev) => !prev)}
@@ -19,7 +36,7 @@ const ProfileMenu = () => {
       </Button>
 
       {open && (
-        <div className="absolute right-0 mt-2 w-56 rounded-lg border border-blue-500 bg-white shadow-lg z-50">
+        <div className="absolute right-0 mt-2 w-56 rounded-lg border border-primary bg-white shadow-lg z-50">
           {/* 프로필 정보 */}
           <div className="flex items-center gap-3 p-4 border-b">
             <Image
