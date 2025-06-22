@@ -64,7 +64,7 @@ export default function ProfileModal({
 
         <DialogFooter>
           <DialogClose asChild>
-            <Button className="w-full mt-4 bg-gray-800 text-white py-2 rounded-md">
+            <Button className="w-full mt-4 bg-gray-800 hover:bg-gray-700 text-white py-2 rounded-md">
               닫기
             </Button>
           </DialogClose>
