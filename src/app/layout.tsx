@@ -1,21 +1,19 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Header from "@/shared/ui/header/Header";
-import Footer from "@/shared/ui/footer/Footer";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import '@/app/globals.css';
 
 const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter", // 원하는 CSS 변수 이름
+  subsets: ['latin'],
+  variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
-  title: "Verdict.gg – 롤 재판소",
+  title: 'Verdict.gg – 롤 재판소',
   description:
-    "롤 유저들이 직접 영상을 보고 유죄인지 무죄인지 판결하는 커뮤니티 플랫폼",
+    '롤 유저들이 직접 영상을 보고 유죄인지 무죄인지 판결하는 커뮤니티 플랫폼',
 };
 
-export default function RootLayout({
+export default function MainLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -25,10 +23,8 @@ export default function RootLayout({
       <body
         className={`${inter.variable} antialiased flex flex-col min-h-screen `}
       >
-        <div className="flex flex-col flex-grow w-full h-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Header />
-          <main className="flex-grow  bg-gray-100">{children}</main>
-          <Footer />
+        <div className="flex flex-col flex-grow w-full h-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 bg-gray-100">
+          {children}
         </div>
       </body>
     </html>
