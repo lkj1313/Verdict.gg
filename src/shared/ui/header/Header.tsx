@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/logo.png";
 import { Button, Input } from "@/components/common";
-import { Pencil, Bell } from "lucide-react";
+import { Pencil } from "lucide-react";
 import ProfileMenu from "@/feature/user/ui/ProfileMenu";
 import NotificationMenu from "@/feature/user/ui/NotificationMenu";
 
