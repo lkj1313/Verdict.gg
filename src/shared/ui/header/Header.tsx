@@ -9,7 +9,7 @@ import NotificationMenu from '@/feature/user/ui/NotificationMenu';
 
 const Header = () => {
   return (
-    <header className="w-full border-2 shadow-sm rounded-lg py-4">
+    <header className="w-full border-b-2 shadow-sm rounded-lg py-4">
       <div className="w-full flex justify-between  items-center p-5">
         <Link href="/" className="inline-block">
           <h1 className="text-4xl font-bold tracking-tight text-primary">
