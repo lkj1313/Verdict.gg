@@ -45,4 +45,4 @@ const FileUploadSection = ({
   );
 };
 
-export default FileUploadSection;
+export { FileUploadSection };

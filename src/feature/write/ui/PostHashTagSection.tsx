@@ -1,7 +1,7 @@
 import { Input } from '@/components/common';
 import Textarea from '@/components/common/Textarea';
 
-const PostEditorSection = () => {
+const PostHashTagSection = () => {
   return (
     <section className="flex flex-col gap-5 p-10  bg-white rounded-xl">
       <p className="text-primary font-bold">글 작성</p>
@@ -17,8 +17,13 @@ const PostEditorSection = () => {
           className="h-64"
         />
       </div>
+      <p className="text-primary font-bold">해시태그</p>
+      <Input
+        className="border-black rounded-2xl"
+        placeholder="해시태그를 입력해주세요"
+      ></Input>
     </section>
   );
 };
 
-export default PostEditorSection;
+export { PostHashTagSection };
