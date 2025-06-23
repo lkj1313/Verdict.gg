@@ -25,6 +25,7 @@ const NotificationMenu = () => {
       <Button
         variant="ghost"
         size="icon"
+        title="알림"
         className="relative"
         onClick={() => setOpen((prev) => !prev)}
         aria-label="Notification menu"
