@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { User, LogOut, BookText, Gavel, UserCircle } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/common';
-import ProfileModal from '@/feature/user/ui/Modal';
+import ProfileModal from '@/feature/profile/ui/Modal';
 
 const ProfileMenu = () => {
   const [open, setOpen] = useState(false);
