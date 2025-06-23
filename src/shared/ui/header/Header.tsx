@@ -13,20 +13,19 @@ const Header = () => {
     <header className="w-full border-b-2 shadow-sm rounded-lg py-4">
       <div className="w-full flex justify-between  items-center p-5">
         <Link href="/" className="inline-block">
-          <h1 className="text-4xl font-bold tracking-tight text-primary">
+          <h1 className="text-xl xs:text-4xl font-bold tracking-tight text-primary">
             Verdict.gg
           </h1>
         </Link>
         {/* 가운데 인풋 */}
-        <div className="flex-1 px-8">
+        <div className="hidden sm:block flex-1 px-8">
           <Input type="text" placeholder="검색해보세요..." />
         </div>
         <div className="flex items-center gap-3">
           {pathname !== 'write' && (
-            <Button asChild variant="default">
+            <Button asChild variant="ghost" size="icon" title="글 쓰기">
               <Link href="/write">
                 <Pencil className="w-4 h-4" />
-                글쓰기
               </Link>
             </Button>
           )}

@@ -31,6 +31,7 @@ const ProfileMenu = () => {
       <div className="relative" ref={wrapperRef}>
         <Button
           variant="ghost"
+          title="프로필"
           onClick={() => setOpen((prev) => !prev)}
           aria-label="Profile menu"
           size="icon"
