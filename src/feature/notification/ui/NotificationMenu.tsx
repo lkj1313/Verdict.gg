@@ -35,7 +35,7 @@ const NotificationMenu = () => {
       </Button>
 
       {open && (
-        <div className="absolute min-h-[300px] right-0 mt-2 w-80 rounded-lg border border-primary bg-white shadow-lg z-50 overflow-hidden flex flex-col justify-between">
+        <div className="absolute min-h-[300px] right-0 mt-2 w-60 xs:w-80 rounded-lg border border-primary bg-white shadow-lg z-50 overflow-hidden flex flex-col justify-between">
           {/* 제목 */}
           <div className="px-4 py-3 border-b">
             <p className="text-sm font-semibold text-gray-800">🔔 전체</p>
