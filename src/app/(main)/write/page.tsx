@@ -15,9 +15,8 @@ const WritePage = () => {
   return (
     <>
       <div className="flex flex-col gap-5">
-        <div className="">
-          <BackButton />
-        </div>
+        <BackButton />
+
         <form
           onSubmit={(e) => {
             e.preventDefault();
