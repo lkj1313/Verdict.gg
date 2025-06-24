@@ -8,7 +8,7 @@ const Textarea = ({
   return (
     <textarea
       className={cn(
-        'w-full p-4 text-sm border rounded-xl resize-none outline-none focus:ring-2 focus:ring-black',
+        'w-full p-4 text-sm border border-gray-500 rounded-xl resize-none outline-none focus:ring-2 focus:ring-black transition-all',
         'placeholder:text-xs xs:placeholder:text-sm',
         className
       )}

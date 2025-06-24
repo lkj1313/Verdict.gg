@@ -1,7 +1,9 @@
+'use client';
+
 import React from 'react';
 
 const MainPage = () => {
-  return <div>page</div>;
+  return <div> </div>;
 };
 
 export default MainPage;
