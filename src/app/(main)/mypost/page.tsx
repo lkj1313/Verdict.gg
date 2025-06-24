@@ -5,7 +5,7 @@ import React from 'react';
 
 const MyPostPage = () => {
   return (
-    <div className="flex flex-col gap-5 h-full">
+    <div className="flex flex-col gap-5 min-h-[800px]">
       <BackButton />
       <div className="flex flex-col gap-5 flex-grow p-10 bg-white rounded-xl">
         <h2 className="font-bold">내가 쓴 글 </h2>
@@ -19,7 +19,7 @@ const MyPostPage = () => {
         <div className="flex flex-col flex-grow items-center  justify-center">
           {' '}
           <p className="text-base font-semibold">아직 게시된 글이 없어요</p>
-          <p className="text-sm">내 플레이의 과실이 궁금하다면?</p>
+          <p className="text-sm">나의 과실이 궁금하다면?</p>
           <Button asChild variant="primary" className="mt-3">
             <Link href="/write">게시글 작성</Link>
           </Button>
