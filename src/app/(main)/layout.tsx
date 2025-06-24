@@ -7,7 +7,9 @@ export default function MainLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <Header />
-      <main className="flex-grow bg-gray-100 p-5 xs:p-10">{children}</main>
+      <main className="relative flex-grow bg-gray-100 p-5 xs:p-10  ">
+        {children}
+      </main>
       <Footer />
     </>
   );
