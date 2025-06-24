@@ -12,7 +12,7 @@ import {
 import { Pencil } from 'lucide-react';
 import Image from 'next/image';
 
-export default function ProfileModal({
+export function ProfileModal({
   open,
   onClose,
 }: {
