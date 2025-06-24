@@ -4,6 +4,7 @@ import { User, LogOut, BookText, Gavel, UserCircle } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/common';
 import ProfileModal from '@/feature/profile/ui/Modal';
+import Link from 'next/link';
 
 const ProfileMenu = () => {
   const [open, setOpen] = useState(false);
@@ -68,10 +69,12 @@ const ProfileMenu = () => {
                 <UserCircle className="w-4 h-4" />
                 프로필
               </li>
-              <li className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                <BookText className="w-4 h-4" />
-                내가 쓴 글
-              </li>
+              <Link href="/mypost">
+                <li className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  <BookText className="w-4 h-4" />
+                  내가 쓴 글
+                </li>
+              </Link>
               <li className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 cursor-pointer">
                 <Gavel className="w-4 h-4" />
                 내가 내린 판결
