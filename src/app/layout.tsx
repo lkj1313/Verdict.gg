@@ -21,7 +21,7 @@ export default function MainLayout({
   return (
     <html lang="ko" className="h-full">
       <body
-        className={`${inter.variable} antialiased flex flex-col min-h-screen `}
+        className={`${inter.variable} antialiased flex flex-col min-h-dvh `}
       >
         <div className="flex flex-col flex-grow w-full h-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 bg-gray-100">
           {children}
