@@ -5,7 +5,7 @@ import React from 'react';
 
 const MyPostPage = () => {
   return (
-    <div className="flex flex-col gap-5 min-h-[800px]">
+    <div className="flex flex-col gap-5 min-h-[400px] xs:min-h-[800px]">
       <BackButton />
       <div className="flex flex-col gap-5 flex-grow p-10 bg-white rounded-xl">
         <h2 className="font-bold">내가 쓴 글 </h2>
