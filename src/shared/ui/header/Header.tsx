@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { Button, Input } from '@/components/common';
 import { Pencil } from 'lucide-react';
 import ProfileMenu from '@/feature/profile/ui/ProfileMenu';
-import NotificationMenu from '@/feature/notification/ui/NotificationMenu';
+import { NotificationMenu } from '@/feature/notification/ui';
 
 const Header = () => {
   const pathname = usePathname();
