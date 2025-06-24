@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '@/app/globals.css';
+import PageTransitionWrapper from './PageTransitionWrapper';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -26,9 +27,9 @@ export default function MainLayout({
       <body
         className={`${inter.variable} antialiased flex flex-col min-h-dvh `}
       >
-        <div className="flex flex-col flex-grow w-full h-dvh max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 bg-gray-100 ">
+        <PageTransitionWrapper className="flex flex-col flex-grow w-full h-dvh max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 bg-gray-100 ">
           {children}
-        </div>
+        </PageTransitionWrapper>
       </body>
     </html>
   );
