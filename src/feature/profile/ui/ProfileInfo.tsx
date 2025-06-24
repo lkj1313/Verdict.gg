@@ -1,6 +1,8 @@
 import Image from 'next/image';
-
-export const ProfileInfo = () => (
+interface Props {
+  onProfileClick: () => void;
+}
+export const ProfileInfo = ({ onProfileClick }: Props) => (
   <div className="flex items-center gap-3 p-4 border-b">
     <Image
       src="/path/to/profileImage.png"
@@ -8,6 +10,7 @@ export const ProfileInfo = () => (
       width={40}
       height={40}
       className="rounded-full"
+      onClick={onProfileClick}
     />
     <div className="text-sm">
       <p className="font-semibold">ㅇㅇㅇㅇㅇ</p>
