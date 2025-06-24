@@ -15,23 +15,21 @@ const WritePage = () => {
 
   useBeforeUnloadBlocker();
   return (
-    <>
-      <div className="flex flex-col gap-5">
-        <BackButton />
+    <div className="flex flex-col gap-5">
+      <BackButton />
 
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-          }}
-          className="flex flex-col gap-8"
-        >
-          <FileUploadSection tab={tab} setTab={setTab} />
-          <PostHashTagSection />
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+        className="flex flex-col gap-8"
+      >
+        <FileUploadSection tab={tab} setTab={setTab} />
+        <PostHashTagSection />
 
-          <SubmitButton />
-        </form>
-      </div>
-    </>
+        <SubmitButton />
+      </form>
+    </div>
   );
 };
 
