@@ -2,6 +2,7 @@ import { ProfileInfo, ProfileMenuList } from './index';
 
 interface Props {
   onProfileClick: () => void;
+  setOpen: () => void;
 }
 
 export const ProfileDropdown = ({ onProfileClick }: Props) => (

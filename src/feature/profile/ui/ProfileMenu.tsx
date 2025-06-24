@@ -18,6 +18,7 @@ const ProfileMenu = () => {
           <ProfileDropdown
             onProfileClick={() => {
               setShowProfileModal(true);
+              setOpen(false);
             }}
           />
         )}
