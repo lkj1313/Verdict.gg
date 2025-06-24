@@ -12,7 +12,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f5f5f5] flex items-center justify-center px-4">
+    <div className="min-h-dvh bg-[#f5f5f5] flex items-center justify-center px-4">
       <div className="flex flex-col items-center w-full max-w-xs space-y-8">
         {/* 로고 */}
         <Link href="/">
