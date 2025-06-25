@@ -1,5 +1,5 @@
 // src/components/ui/Textarea.tsx
-import { cn } from '@/lib/utils/cn';
+import { cn } from '@/shared/lib/utils/cn';
 
 const Textarea = ({
   className,
