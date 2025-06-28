@@ -1,6 +1,8 @@
 'use client';
 
 import { Input } from '@/components/common';
+import Link from 'next/link';
+
 import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 
@@ -25,10 +27,12 @@ export default function SignupPage() {
   return (
     <div className="min-h-screen flex items-center justify-center px-4 py-10">
       <div className=" w-full bg-white max-w-md rounded-xl shadow-md p-8 space-y-6">
-        <h1 className="text-center text-3xl font-bold text-primary">
-          Verdict.gg
-        </h1>
-        <h2 className="text-center text-lg text-gray-600">간단 회원가입</h2>
+        <Link href="/" className="inline-block w-full">
+          <h1 className=" text-center w-full text-3xl font-bold tracking-tight text-primary">
+            Verdict.gg
+          </h1>
+        </Link>
+        <h2 className="text-center xs:text-lg text-gray-600">간단 회원가입</h2>
 
         {/* 이메일 */}
         <div>
