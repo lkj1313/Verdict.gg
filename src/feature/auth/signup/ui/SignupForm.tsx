@@ -3,7 +3,8 @@
 import { Button, Input } from '@/components/common';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { cn } from '@/shared/lib/utils/cn';
 
 export default function SignupForm() {
   const searchParams = useSearchParams();
@@ -22,10 +23,24 @@ export default function SignupForm() {
     setTermsChecked(newValue);
     setPrivacyChecked(newValue);
   };
-
+  // 상단 useState 아래에 추가
+  const isValid =
+    nickname.trim().length >= 2 &&
+    is14Checked &&
+    termsChecked &&
+    privacyChecked;
+  useEffect(() => {
+    const all = is14Checked && termsChecked && privacyChecked;
+    setAllChecked(all);
+  }, [is14Checked, termsChecked, privacyChecked]);
   return (
     <div className="min-h-screen flex items-center justify-center px-4 py-10">
-      <form className="w-full bg-white max-w-md rounded-xl shadow-md p-8 space-y-6">
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+        className="w-full bg-white max-w-md rounded-xl shadow-md p-8 space-y-6"
+      >
         <Link href="/" className="inline-block w-full">
           <h1 className="text-center text-3xl font-bold tracking-tight text-primary">
             Verdict.gg
@@ -42,13 +57,18 @@ export default function SignupForm() {
 
         <div>
           <label className="block text-sm mb-1">닉네임</label>
-          <div className="flex items-center gap-2">
+          <div className="flex flex-col  gap-2">
             <Input
               type="text"
               placeholder="닉네임을 입력해주세요."
               value={nickname}
               onChange={(e) => setNickname(e.target.value)}
             />
+            {nickname.trim().length > 0 && nickname.trim().length < 2 && (
+              <p className="mt-1 text-sm text-red-500">
+                닉네임은 2자 이상이어야 합니다.
+              </p>
+            )}
           </div>
         </div>
 
@@ -61,7 +81,7 @@ export default function SignupForm() {
               variant="checkbox"
             />
             <span>
-              만 14세 이상입니다. <span className="text-gray-500">(필수)</span>
+              만 14세 이상입니다. <span className="">(필수)</span>
             </span>
           </label>
 
@@ -104,9 +124,15 @@ export default function SignupForm() {
         </div>
 
         <Button
+          variant="ghost"
           type="submit"
-          className="w-full mt-4 py-3 rounded-md bg-gray-300 text-white text-sm font-semibold"
-          disabled
+          disabled={!isValid}
+          className={cn(
+            'w-full mt-4 py-3 rounded-md text-white text-sm font-semibold',
+            isValid
+              ? 'bg-black hover:bg-gray-800'
+              : 'bg-gray-300 cursor-not-allowed '
+          )}
         >
           가입하기
         </Button>
